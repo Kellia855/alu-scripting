@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """"
 Function that prints the titles of the first 10 hot posts of a subreddit.
 """
