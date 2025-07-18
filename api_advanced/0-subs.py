@@ -5,7 +5,10 @@ Function to query Reddit API for subreddit subscriber count.
 import requests
 
 def number_of_subscribers(subreddit):
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+""""
+returns the number of subscribers for the specified subreddit.
+"""
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {
         'User-Agent': 'python:subscribers.counter:v1.0 (by /u/yourusername)'
     }
