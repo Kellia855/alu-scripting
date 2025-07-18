@@ -14,7 +14,7 @@ def top_ten(subreddit):
     """
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
     headers = {
-        'User-Agent': 'python:topten.fetcher:v1.0 (by /u/your_actual_username)'
+        'User-Agent': 'CustomUserAgent/0.1'
     }
 
     response = requests.get(url, headers=headers, allow_redirects=False)
