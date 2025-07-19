@@ -18,7 +18,7 @@ def recurse(subreddit, hot_list=None, after=None):
     if hot_list is None:
         hot_list = []
 
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
         'User-Agent': 'python:subreddit.hot:v1.0 (by /u/yourusername)'
     }
