@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
 """
-Function that prints the titles of the first 10 hot posts of a subreddit.
+Module that defines a recursive function to retrieve all hot article titles
+from a given subreddit using Reddit's API.
 """
 
 import requests
 
 
 def top_ten(subreddit):
-    """Queries the Reddit API and prints titles of 10 hott posts"""
-    
+    """Queries the Reddit API and prints titles of 10 hot posts"""
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {'User-Agent': 'MyRedditBot/0.1'}
 
@@ -25,5 +25,5 @@ def top_ten(subreddit):
         for post in posts:
             print(post["data"]["title"])
 
-     except Exception:
-       return None
+    except Exception:
+        return None
