@@ -11,6 +11,10 @@ def recurse(subreddit, hot_list=[], after=None):
         the titles of all hot articles for a given subreddit. If no results
         are found for the given subreddit, the function should return None.
     """
+    if hot_list is None:
+        hot_list = []
+
+
     headers = {'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0)\
                 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100\
                 Safari/537.36'}
