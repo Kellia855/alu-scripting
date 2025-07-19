@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This module defines a recursive function to retrieve all hot articles
 from a given subreddit using Reddit's API.
