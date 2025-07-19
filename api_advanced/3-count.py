@@ -9,7 +9,7 @@ sorted count of specified keywords
 import requests
 
 
-def count_words(subreddit, word_list, after='', word_dict=None):
+def count_words(subreddit, word_list, after='', word_dict={}):
     """ 
     Recursively fetches hot post titles from a subreddit and counts the occurrences of each keyword in word_list.
     """
