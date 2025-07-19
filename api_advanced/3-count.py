@@ -8,9 +8,9 @@ import re
 
 
 def count_words(subreddit, word_list, after=None, word_count=None):
-"""
-Recursively counts keywords in hot article titles from a subreddit.
-"""
+  """
+  Recursively counts keywords in hot article titles from a subreddit.
+  """
     if word_count is None:
         # Initialize word counts with lowercase keys
         word_count = {}
