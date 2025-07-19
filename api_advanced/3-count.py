@@ -1,4 +1,4 @@
-#!@/usr/bin/python3
+#!/usr/bin/python3
 """
 This module defines a recursive function that queries the Reddit API,
 parses the titles of hot articles in a given subreddit, and prints a
