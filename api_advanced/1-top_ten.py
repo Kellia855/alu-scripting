@@ -6,7 +6,6 @@ Function that prints the titles of the first 10 hot posts of a subreddit.
 
 import requests
 
-
 def top_ten(subreddit):
     """Queries the Reddit API and prints titles of 10 hot posts"""
     
@@ -17,8 +16,7 @@ def top_ten(subreddit):
         response = requests.get(url, headers=headers, allow_redirects=False)
 
         if response.status_code != 200:
-            print("None")
-            return
+            return None
 
         data = response.json()
         posts = data.get("data", {}).get("children", [])
@@ -27,4 +25,4 @@ def top_ten(subreddit):
             print(post["data"]["title"])
 
     except Exception:
-        print("None")
+       return None
