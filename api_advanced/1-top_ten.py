@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
-""""
+"""
 Function that prints the titles of the first 10 hot posts of a subreddit.
 """
 
 import requests
 
+
 def top_ten(subreddit):
-    """Queries the Reddit API and prints titles of 10 hot posts"""
+    """Queries the Reddit API and prints titles of 10 hott posts"""
     
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {'User-Agent': 'MyRedditBot/0.1'}
@@ -24,5 +25,5 @@ def top_ten(subreddit):
         for post in posts:
             print(post["data"]["title"])
 
-    except Exception:
+     except Exception:
        return None
