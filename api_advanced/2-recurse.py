@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 
-"""Recursive function that returns all hot article titles from a subreddit."""
+"""
+This module defines a recursive function to retrieve all hot articles
+from a given subreddit using Reddit's API.
+
+It uses the `requests` library to make HTTP GET requests to the Reddit API
+and recursively follows pagination links until all titles are retrieved.
+"""
+
 import requests
 
 
