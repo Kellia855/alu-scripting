@@ -8,15 +8,16 @@ import requests
 
 
 def recurse(subreddit, hot_list=None, after=None):
-    """
-    Queries the Reddit API and returns a list containing the titles
+    """Queries the Reddit API and returns a list containing the titles
     of all hot articles for a given subreddit. If no results are found
     for the given subreddit, the function returns None.
     """
     if hot_list is None:
         hot_list = []
 
-    headers = {'User-agent': 'python:recurse:v1.0 (by /u/fakeuser)'}
+    headers = {
+        'User-agent': 'python:recurse:v1.0 (by /u/fakeuser)'
+}
     url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     params = {'limit': 100, 'after': after}
     response = requests.get(url, headers=headers, params=params)
